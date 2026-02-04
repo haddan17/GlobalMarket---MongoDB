@@ -3,7 +3,7 @@
 
 db = db.getSiblingDB('globalmarket_db');
 
-print("🔄 Aplicando validación de esquema en sales_transformed...");
+print(" Aplicando validación de esquema en sales_transformed...");
 
 db.runCommand({
   collMod: "sales_transformed",
