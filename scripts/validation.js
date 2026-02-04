@@ -48,4 +48,4 @@ db.runCommand({
   validationAction: "error"
 });
 
-print("✅ Validación aplicada exitosamente");
+print("Validación aplicada exitosamente");
