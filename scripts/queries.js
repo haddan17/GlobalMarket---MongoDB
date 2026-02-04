@@ -4,7 +4,7 @@
 db = db.getSiblingDB('globalmarket_db');
 
 // ==================== PIPELINE 1 ====================
-print("📊 Pipeline 1: Reporte de ventas por categoría y mes");
+print(" Pipeline 1: Reporte de ventas por categoría y mes");
 const ventasPorCategoriaMes = [
   {
     $match: {
@@ -57,7 +57,7 @@ printjson(resultado1.slice(0, 3)); // Muestra primeros 3
 print("----------------------------------------");
 
 // ==================== PIPELINE 2 ====================
-print("⭐ Pipeline 2: Top productos mejor calificados (simulado)");
+print(" Pipeline 2: Top productos mejor calificados (simulado)");
 const topProductos = [
   {
     $addFields: {
@@ -94,7 +94,7 @@ printjson(resultado2);
 print("----------------------------------------");
 
 // ==================== PIPELINE 3 ====================
-print("💰 Pipeline 3: Productos por rango de precio (Bucket)");
+print(" Pipeline 3: Productos por rango de precio (Bucket)");
 const bucketPrecios = [
   {
     $addFields: {
@@ -142,4 +142,4 @@ const bucketPrecios = [
 const resultado3 = db.sales_transformed.aggregate(bucketPrecios).toArray();
 printjson(resultado3);
 print("----------------------------------------");
-print("✅ Todos los pipelines ejecutados");
+print("Todos los pipelines ejecutados");
